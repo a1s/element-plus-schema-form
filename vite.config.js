@@ -45,7 +45,7 @@ export default defineConfig({
           esModule: false,
           ensureStyleFile: true,
           resolveStyle: (name) => {
-            return name === 'locale' ? '' : `element-plus/lib/theme-chalk/${name}.css`
+            return name === 'locale' ? '' : `element-plus/theme-chalk/${name}.css`
           },
           resolveComponent: (name) => {
             return `element-plus/lib/${name}`
