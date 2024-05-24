@@ -1,9 +1,9 @@
 
 <template>
-  <div>付款账户：{{info.account}}</div>
-  <div>收款人姓名：{{info.payeeName}}</div>
-  <div>转账金额：{{info.money}}</div>
-  <div>支付方式：{{info.pay}}</div>
+  <div>Payment account：{{info.account}}</div>
+  <div>Payee name：{{info.payeeName}}</div>
+  <div>Transfer amount：{{info.money}}</div>
+  <div>Payment method：{{info.pay}}</div>
 </template>
 
 <script>

@@ -2,14 +2,14 @@ export const step1Schemas = [
   {
     field: 'account',
     component: 'Select',
-    label: '付款账户',
+    label: 'Payment account',
     required: true,
-    defaultValue: '涡轮增压',
+    defaultValue: 'Turbocharging',
     componentProps: {
       options: [
         {
-          label: '涡轮增压',
-          value: '涡轮增压',
+          label: 'Turbocharging',
+          value: 'Turbocharging',
         },
       ],
     },
@@ -17,7 +17,7 @@ export const step1Schemas = [
   {
     field: 'pay',
     component: 'Select',
-    label: '支付方式',
+    label: 'Payment method',
     defaultValue: 'zfb',
     componentProps: {
       options: [
@@ -35,14 +35,14 @@ export const step1Schemas = [
   {
     field: 'payeeName',
     component: 'Input',
-    label: '收款人姓名',
+    label: 'Payee name',
     defaultValue: 'vc',
     required: true,
   },
   {
     field: 'money',
     component: 'Input',
-    label: '转账金额',
+    label: 'Transfer amount',
     defaultValue: '500',
     required: true,
     renderComponentContent: () => {
@@ -57,10 +57,10 @@ export const step2Schemas = [
   {
     field: 'pwd',
     component: 'Input',
-    label: '支付密码',
+    label: 'Payment password',
     required: true,
     componentProps: {
-      placeholder: '请输入支付密码'
+      placeholder: 'Please enter payment password'
     }
   },
 ]

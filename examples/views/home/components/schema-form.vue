@@ -2,20 +2,20 @@
   <el-container class="schema-container">
     <div class="schema-aside">
       <div class="schema-aside-opt">
-        <el-switch class="mb-20" active-text="显示操作按钮" v-model="showActionButtonGroup" @change="onChange" />
-        <el-switch class="mb-20" active-text="显示重置按钮" v-model="showResetButton" @change="onChange" />
-        <el-switch class="mb-20" active-text="显示提交按钮" v-model="showSubmitButton" @change="onChange" />
-        <el-button class="mb-20" @click="setProps({ submitButtonOptions: { loading: true, text: '加载中' }})">修改提交按钮</el-button>
-        <el-button class="mb-20" @click="setProps({ resetButtonOptions: { text: '取消' }})">修改重置按钮</el-button>
-        <el-button class="mb-20" @click="setProps({ textAlign: 'right' })">修改按钮位置</el-button>
-        <el-button class="mb-20" @click="onGetFormModal">获取表单值</el-button>
-        <el-button class="mb-20" @click="onDisplay">回显 字段1</el-button>
-        <el-button class="mb-20" @click="onResetFields">重置表单</el-button>
-        <!-- <el-button class="mb-20" @click="onValidateFields">校验自定义校验规则</el-button> -->
-        <el-button class="mb-20" @click="validateForm">手动校验表单</el-button>
-        <el-button class="mb-20" @click="resetValidate">清空校验信息</el-button>
-        <el-button class="mb-20" @click="deleteField">删除 字段1</el-button>
-        <el-button class="mb-20" @click="appendField"> 往字段1后面插入字段2 </el-button>
+        <el-switch class="mb-20" active-text="Show action buttons" v-model="showActionButtonGroup" @change="onChange" />
+        <el-switch class="mb-20" active-text="Show reset button" v-model="showResetButton" @change="onChange" />
+        <el-switch class="mb-20" active-text="Show submit button" v-model="showSubmitButton" @change="onChange" />
+        <el-button class="mb-20" @click="setProps({ submitButtonOptions: { loading: true, text: 'loading' }})">Modify submit button</el-button>
+        <el-button class="mb-20" @click="setProps({ resetButtonOptions: { text: 'Cancel' }})">Modify reset button</el-button>
+        <el-button class="mb-20" @click="setProps({ textAlign: 'right' })">Modify button position</el-button>
+        <el-button class="mb-20" @click="onGetFormModal">Get form value</el-button>
+        <el-button class="mb-20" @click="onDisplay">Echo field 1</el-button>
+        <el-button class="mb-20" @click="onResetFields">Reset form</el-button>
+        <!-- <el-button class="mb-20" @click="onValidateFields">Verify custom verification rules</el-button> -->
+        <el-button class="mb-20" @click="validateForm">Manually validate the form</el-button>
+        <el-button class="mb-20" @click="resetValidate">Clear validation result</el-button>
+        <el-button class="mb-20" @click="deleteField">Delete field 1</el-button>
+        <el-button class="mb-20" @click="appendField">Insert field 2 after field 1</el-button>
       </div>
     </div>
     <el-main class="schema-main">
@@ -49,18 +49,18 @@ const schemas = [
   {
     field: 'field1',
     component: 'Input',
-    label: '字段1',
-    helpMessage: '这是字段1',
+    label: 'Field 1',
+    helpMessage: 'This is field 1',
     helpComponentProps: {
       placement: 'bottom',
       icon: 'el-icon-question'
-      // ... el-tooltip 属性
+      // ... el-tooltip attributes
     },
     colProps: {
       span: 8
     },
     componentProps: {
-      placeholder: '自定义placeholder',
+      placeholder: 'customize placeholder',
       maxlength: 4,
       clearable: true,
       onChange: (e) => {
@@ -71,13 +71,13 @@ const schemas = [
       return !!values.field7
     },
     dynamicRules: ({ values }) => {
-      return values.field8 ? [{ required: true, message: '字段1必填' }] : []
+      return values.field8 ? [{ required: true, message: 'Field 1 is required' }] : []
     }
   },
   {
     field: 'field8',
     component: 'Switch',
-    label: '字段1是否必填',
+    label: 'Is field 1 required?',
     colProps: {
       span: 8
     }
@@ -85,7 +85,7 @@ const schemas = [
   {
     field: 'field7',
     component: 'Switch',
-    label: '是否禁用字段1',
+ label: 'Whether to disable field 1',
     colProps: {
       span: 8
     }
@@ -93,7 +93,7 @@ const schemas = [
   {
     field: 'field2',
     component: 'Input',
-    label: '默认值',
+    label: 'default value',
     colProps: {
       span: 8
     },
@@ -105,7 +105,7 @@ const schemas = [
   {
     field: 'field18',
     component: 'Input',
-    label: '自定义校验规则',
+    label: 'Custom verification rules',
     colProps: {
       span: 8
     },
@@ -121,10 +121,10 @@ const schemas = [
         required: true,
         validator: async (rule, value) => {
           if (!value) {
-            return Promise.reject('值不能为空')
+            return Promise.reject('Value cannot be empty')
           }
           if (value === '1') {
-            return Promise.reject('值不能为1')
+            return Promise.reject('Value cannot be 1')
           }
           return Promise.resolve()
         },
@@ -135,7 +135,7 @@ const schemas = [
   {
     field: 'field25',
     component: 'Switch',
-    label: '显示自定义校验规则',
+    label: 'Show custom verification rules',
     defaultValue: true,
     colProps: {
       span: 8
@@ -144,7 +144,7 @@ const schemas = [
   {
     field: 'field16',
     component: 'Input',
-    label: '输入框前置内容',
+    label: 'Contents of input box prefix',
     colProps: {
       span: 8
     },
@@ -157,7 +157,7 @@ const schemas = [
   {
     field: 'field17',
     component: 'Input',
-    label: '输入框后置内容',
+    label: 'Contents of input box suffix',
     colProps: {
       span: 8
     },
@@ -170,7 +170,7 @@ const schemas = [
   {
     field: 'field3',
     component: 'Input',
-    label: '自定义渲染组的 slot',
+    label: 'slot of custom rendering group',
     colProps: {
       span: 8
     },
@@ -182,7 +182,7 @@ const schemas = [
   },
   {
     field: 'field6',
-    label: '自定义Slot-远程搜索',
+    label: 'Custom Slot-Remote Search',
     slot: 'f3',
     colProps: {
       span: 12
@@ -191,13 +191,13 @@ const schemas = [
   {
     field: 'field11',
     component: 'Input',
-    label: 'render方式',
+    label: 'render mode',
     colProps: {
       span: 12
     },
     render: ({ model, field }) => {
       return h(ElInput, {
-        placeholder: '请输入',
+        placeholder: 'Please enter',
         modelValue: model[field],
         onInput: (e) => {
           model[field] = e
@@ -208,7 +208,7 @@ const schemas = [
   {
     field: 'field4',
     component: 'Select',
-    label: '单选',
+    label: 'radio choice',
     colProps: {
       span: 8
     },
@@ -217,25 +217,25 @@ const schemas = [
       filterable: true,
       options: [
         {
-          value: '选项1',
-          label: '黄金糕'
+          value: 'Option 1',
+          label: 'golden cake'
         }, {
-          value: '选项2',
-          label: '双皮奶'
+          value: 'Option 2',
+          label: 'double skin milk'
         }, {
-          value: '选项3',
-          label: '蚵仔煎'
+          value: 'Option 3',
+          label: 'oyster omelette'
         }, {
-          value: '选项4',
+          value: 'Option 4',
           disabled: true,
-          label: '龙须面'
+          label: 'Dragon Beard Noodles'
         }, {
-          value: '选项5',
-          label: '北京烤鸭'
+          value: 'Option 5',
+          label: 'Beijing Roast Duck'
         }
       ],
       onChange: () => {
-        // 配置请求参数
+        //Configure request parameters
         // schemas.filter(it => it.field === 'field30')[0].componentProps.params.query = '2'
       }
     }
@@ -243,7 +243,7 @@ const schemas = [
   {
     field: 'field30',
     component: 'Select',
-    label: '远程下拉',
+    label: 'remote drop-down',
     componentProps: {
       filterable: true,
       // api: getUserInfo,
@@ -262,7 +262,7 @@ const schemas = [
   {
     field: 'field29',
     component: 'Cascader',
-    label: '级联',
+    label: 'cascade',
     colProps: {
       span: 8
     },
@@ -271,55 +271,55 @@ const schemas = [
       options: [
         {
           value: 1,
-          label: '东南',
+          label: 'Southeast',
           children: [
             {
               value: 2,
-              label: '上海',
+              label: 'Shanghai',
               children: [
-                { value: 3, label: '普陀' },
-                { value: 4, label: '黄埔' },
-                { value: 5, label: '徐汇' }
+                { value: 3, label: 'Putuo' },
+                { value: 4, label: 'Huangpu' },
+                { value: 5, label: 'Xuhui' }
               ]
             },
             {
               value: 7,
-              label: '江苏',
+              label: 'Jiangsu',
               children: [
-                { value: 8, label: '南京' },
-                { value: 9, label: '苏州' },
-                { value: 10, label: '无锡' }
+                { value: 8, label: 'Nanjing' },
+                { value: 9, label: 'Suzhou' },
+                { value: 10, label: 'Wuxi' }
               ]
             },
             {
               value: 12,
-              label: '浙江',
+              label: 'Zhejiang',
               children: [
-                { value: 13, label: '杭州' },
-                { value: 14, label: '宁波' },
-                { value: 15, label: '嘉兴' }
+                { value: 13, label: 'Hangzhou' },
+                { value: 14, label: 'Ningbo' },
+                { value: 15, label: 'Jiaxing' }
               ]
-            }
+            },
           ]
         },
         {
           value: 17,
-          label: '西北',
+          label: 'Northwest',
           children: [
             {
               value: 18,
-              label: '陕西',
+              label: 'Shaanxi',
               children: [
-                { value: 19, label: '西安' },
-                { value: 20, label: '延安' }
+                { value: 19, label: 'Xi\'an' },
+                { value: 20, label: 'Yan\'an' }
               ]
             },
             {
               value: 21,
-              label: '新疆维吾尔族自治区',
+              label: 'Xinjiang Uygur Autonomous Region',
               children: [
-                { value: 22, label: '乌鲁木齐' },
-                { value: 23, label: '克拉玛依' }
+                { value: 22, label: 'Urumqi' },
+                { value: 23, label: 'Karamay' }
               ]
             }
           ]
@@ -331,7 +331,7 @@ const schemas = [
     field: 'field19',
     component: 'DatePicker',
     valueFormate: 'YYYY/MM/DD',
-    label: '日期',
+    label: 'Date',
     colProps: {
       span: 8
     },
@@ -360,23 +360,23 @@ const schemas = [
   {
     field: 'field20',
     component: 'RangePicker',
-    label: '日期范围',
+    label: 'Date Range',
     valueFormate: 'YYYY-MM-DD',
     colProps: {
       span: 16
     },
     componentProps: {
       type: 'daterange',
-      rangeSeparator: '至',
-      startPlaceholder: '开始日期',
-      endPlaceholder: '结束日期'
+      rangeSeparator: 'to',
+      startPlaceholder: 'Start Date',
+      endPlaceholder: 'End Date'
     },
     fieldMapToTime: ['startTime', 'endTime']
   },
   {
     field: 'field21',
     component: 'TimeSelect',
-    label: 'TimeSelect 时间选择',
+    label: 'Time',
     colProps: {
       span: 8
     },
@@ -389,15 +389,15 @@ const schemas = [
   {
     field: 'field22',
     component: 'TimePicker',
-    label: 'TimePicker 时间选择',
+    label: 'Time Range',
     colProps: {
       span: 16
     },
     componentProps: {
       isRange: true,
-      rangeSeparator: '至',
-      startPlaceholder: '开始日期',
-      endPlaceholder: '结束日期'
+      rangeSeparator: 'to',
+      startPlaceholder: 'Start Time',
+      endPlaceholder: 'End Time'
     }
   },
   {
@@ -409,7 +409,7 @@ const schemas = [
     },
     componentProps: ({ formModel }) => {
       return {
-        placeholder: '同步f2的值为f1',
+        placeholder: 'The value of synchronized f2 is f1',
         onInput: (e) => {
           formModel.f2 = e
         }
@@ -419,7 +419,7 @@ const schemas = [
   {
     field: 'f2',
     component: 'Input',
-    label: 'F2-自定义labelWidth',
+    label: 'F2-custom labelWidth',
     colProps: {
       span: 12
     },
@@ -432,13 +432,13 @@ const schemas = [
   {
     field: 'field5',
     component: 'RadioGroup',
-    label: '单选框组',
+    label: 'radio button group',
     colProps: {
       span: 8
     },
-    defaultValue: '选项1',
+    defaultValue: 'Option1',
     componentProps: {
-      options: ['选项1', '选项2']
+    options: ['Option1', 'Option2']
       // type: 'button',
       // border: true,
       // size: 'mini',
@@ -447,18 +447,18 @@ const schemas = [
   {
     field: 'field26',
     component: 'CheckboxGroup',
-    label: '多选框组',
+    label: 'Multiple selection box group',
     colProps: {
       span: 8
     },
     componentProps: {
       options: [
         {
-          label: '选项1',
+          label: 'Option 1',
           value: '3'
         },
         {
-          label: '选项2',
+          label: 'Option 2',
           value: '4'
         }
       ]
@@ -467,7 +467,7 @@ const schemas = [
   {
     field: 'field27',
     component: 'InputNumber',
-    label: '计数器',
+    label: 'Counter',
     colProps: {
       span: 8
     }
@@ -475,7 +475,7 @@ const schemas = [
   {
     field: 'field28',
     component: 'Slider',
-    label: '滑块',
+    label: 'Slider',
     colProps: {
       span: 8
     }
@@ -483,7 +483,7 @@ const schemas = [
   {
     field: 'field24',
     component: 'Rate',
-    label: '评分',
+    label: 'Rating',
     colProps: {
       span: 8
     }
@@ -491,7 +491,7 @@ const schemas = [
   {
     field: 'demo',
     component: 'demo',
-    label: '自定义注册组件',
+    label: 'Custom registration component',
     colProps: {
       span: 8
     }
@@ -499,7 +499,7 @@ const schemas = [
   {
     field: 'field0a',
     component: 'Input',
-    label: '字段0',
+    label: 'Field 0',
     colProps: {
       span: 12
     },
@@ -517,8 +517,8 @@ const schemas = [
 ]
 const rules = {
   field16: [
-    { "required": true, "message": "请输入名称" },
-    { "max": 5, "message": "最多 5 个字符" }
+    { "required": true, "message": "Please enter name" },
+    { "max": 5, "message": "Maximum 5 characters" }
   ]
 }
 export default defineComponent({
@@ -578,8 +578,8 @@ export default defineComponent({
     }
     function querySearchAsync (queryString, cb) {
       cb([{
-        value: '南拳妈妈龙虾盖浇饭',
-        address: '普陀区金沙江路1699号鑫乐惠美食广场A13'
+        value: 'Nan Quan Mama Lobster Rice Bowl',
+        address: 'A13, Xinlehui Food Plaza, No. 1699 Jinshajiang Road, Putuo District'
       }])
     }
     function onChange () {
@@ -588,7 +588,7 @@ export default defineComponent({
     const optVal = toRefs(opt)
 
     function onDisplay () {
-      let defVal = { field1: '我是回显值' }
+      let defVal = { field1: 'I am the echo value' }
       setFieldsValue(defVal)
     }
 

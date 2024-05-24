@@ -1,9 +1,9 @@
 <template>
   <div class="steps-main">
     <el-steps class="steps-center" finish-status="success" :active="active">
-      <el-step title="填写转账信息"></el-step>
-      <el-step title="确认转账信息"></el-step>
-      <el-step title="完成"></el-step>
+      <el-step title="Fill in transfer information"></el-step>
+      <el-step title="Confirm transfer information"></el-step>
+      <el-step title="Finish"></el-step>
     </el-steps>
     <div class="mt-80">
       <Step1 @next="handleStep1Next" v-if="active === 1" />
@@ -14,7 +14,7 @@
       />
       <Step3 :info="info" v-if="active === 3"/>
     </div>
-    <el-link class="link" type="primary" href="https://github.com/WsmDyj/element-plus-schema-form/blob/main/examples/views/steps/index.vue" target="_blank">案例代码</el-link>
+    <el-link class="link" type="primary" href="https://github.com/WsmDyj/element-plus-schema-form/blob/main/examples/views/steps/index.vue" target="_blank">Source code</el-link>
   </div>
 </template>
 <script>

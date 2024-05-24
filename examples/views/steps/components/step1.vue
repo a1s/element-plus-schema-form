@@ -20,7 +20,7 @@ export default defineComponent({
       showResetButton: false,
       labelWidth: "100px",
       submitButtonOptions: {
-        text: '下一步',
+        text: 'Next step',
       },
       submitFunc: customSubmitFunc,
     });

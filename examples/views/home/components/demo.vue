@@ -6,7 +6,7 @@
   :on-change="handleChange"
   :file-list="fileList"
 >
-  <el-button size="small" type="info">点击上传</el-button>
+  <el-button size="small" type="info">Click to upload</el-button>
 </el-upload>
 </template>
 

@@ -2,31 +2,31 @@
   "header": [
     {
       "name": "explain",
-      "cName": "文档",
+      "cName": "Documentation",
       "path": "/explain"
     },
     {
       "name": "example",
-      "cName": "示例",
+      "cName": "Example",
       "path": "/example"
     }
   ],
   "docs": {
-    "name": "指南",
+    "name": "Guide",
     "packages": [
       {
         "name": "explain",
-        "cName": "介绍",
+        "cName": "Introduction",
         "show": true
       },
       {
         "name": "start",
-        "cName": "快速上手",
+        "cName": "Quick start",
         "show": true
       },
       {
         "name": "https://github.com/WsmDyj/element-plus-schema-form/releases",
-        "cName": "更新日志",
+        "cName": "Changelog",
         "show": true,
         "isLink": true
       }
@@ -34,7 +34,7 @@
   },
   "nav": [
     {
-      "name": "组件",
+      "name": "Components",
       "packages": [
         {
           "name": "useForm",
@@ -45,34 +45,34 @@
         {
           "name": "methods",
           "sort": 2,
-          "cName": "函数名",
+          "cName": "methods",
           "show": true
         },
         {
           "name": "props",
           "sort": 2,
-          "cName": "参数名",
+          "cName": "props",
           "show": true
         }
       ]
     },
     {
-      "name": "扩展",
+      "name": "Examples",
       "packages": [
         {
           "name": "steps",
-          "cName": "分步表单",
+          "cName": "Steps form",
           "show": true,
           "isLink": true
         },
         {
           "name": "queryFilter",
-          "cName": "筛选表单",
+          "cName": "Filter form",
           "show": true
         },
         {
           "name": "modalForm",
-          "cName": "弹窗表单",
+          "cName": "Pop-up form",
           "show": true
         }
       ]
