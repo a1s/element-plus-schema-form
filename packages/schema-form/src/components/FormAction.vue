@@ -23,7 +23,7 @@
         v-if="showAdvancedButton && !hideAdvanceBtn"
         @click="toggleAdvanced"
       >
-        {{ isAdvanced ? '收取' : '展开'}}
+        {{ isAdvanced ? 'Collapse' : 'Expand'}}
         <span :class="getClass">
           <i class="el-icon-arrow-down"></i>
         </span>
@@ -94,10 +94,10 @@ export default defineComponent({
       ]
     })
     const getSubmitBtnOptions = computed(() => {
-      return Object.assign({ text: props.showAdvancedButton ? '查询' : '提交' }, props.submitButtonOptions)
+      return Object.assign({ text: props.showAdvancedButton ? 'Query' : 'Submit' }, props.submitButtonOptions)
     })
     const getResetBtnOptions = computed(() => {
-      return Object.assign({ text: '重置' }, props.resetButtonOptions)
+      return Object.assign({ text: 'Reset' }, props.resetButtonOptions)
     })
 
     function toggleAdvanced () {

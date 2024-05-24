@@ -36,15 +36,15 @@ export const genType = () => {
 
 export function createPlaceholderMessage (component) {
   if (component.includes('Input')) {
-    return '请输入'
+    return 'enter value'
   }
   if (component.includes('DatePicker')) {
-    return '请选择时间'
+    return 'select time'
   }
 }
 
 /**
- * 格式化时间
+ * Format time
  */
 const DATE_FORMAT = 'YYYY-MM-DD '
 
@@ -53,7 +53,7 @@ export const dateUtil = (date = null, formate = DATE_FORMAT) => {
 }
 
 /**
- * @description:  获取插槽以防止空错误
+ * @description:  Get slot to prevent null error
  */
 export function getSlot (slots, slot = 'default', data) {
   if (!slots || !Reflect.has(slots, slot)) {
@@ -85,6 +85,6 @@ export function getDynamicProps (props) {
   return ret
 }
 /**
- * 时间字段
+ * Time field
  */
 export const dateItemType = genType()
