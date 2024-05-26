@@ -1,10 +1,13 @@
-## 筛选表单
+## Shortened form
 
+[comment]: # (25-may-2024 [als] cannot decipher what's meant here)
+[comment]: # (DeepL translation: There are times when the form should be used in combination with other components, commonly Table, List, etc., which requires some special forms.)
+[comment]: # (Google translation: Sometimes forms need to be used in combination with other components. Common ones include Table, List, etc. At this time, some special forms of forms are needed.)
 有些是时候表单要与别的组件组合使用，常见的有 Table ，List 等，这时候就需要一些特殊形态的表单。
 
-- 通过设置 **showAdvancedButton** 为 true，开启一个筛选表单
+- Enable form shortening by setting **showAdvancedButton** to `true`.
 
-- 设置 **autoAdvancedLine** 属性超多多少行自动折叠, 默认是 3 行, 不小于 2 行
+- Set **autoAdvancedLine** to the number of lines shown on the shortened form.  The value may not be less than 2 lines.  Default: 3 lines.
 
 <script setup>
 import { SchemaForm, useForm} from '../packages/schema-form'
@@ -12,7 +15,7 @@ const schemas = [
   {
       field: 'field11',
       component: 'Input',
-      label: '字段11',
+      label: 'Field 11',
       colProps: {
         span: 8,
       },
@@ -20,7 +23,7 @@ const schemas = [
     {
       field: 'field12',
       component: 'Input',
-      label: '字段12',
+      label: 'Field 12',
       colProps: {
         span: 8,
       },
@@ -28,7 +31,7 @@ const schemas = [
     {
       field: 'field13',
       component: 'Input',
-      label: '字段13',
+      label: 'Field 13',
       colProps: {
         span: 8,
       },
@@ -36,18 +39,18 @@ const schemas = [
     {
       field: 'field1',
       component: 'Input',
-      label: '字段1',
+      label: 'Field 1',
       colProps: {
         span: 8,
       },
       componentProps: {
-        placeholder: '自定义placeholder',
+        placeholder: 'custom placeholder',
       },
     },
     {
       field: 'field2',
       component: 'Input',
-      label: '字段2',
+      label: 'Field 2',
       colProps: {
         span: 8,
       },
@@ -55,7 +58,7 @@ const schemas = [
     {
       field: 'field3',
       component: 'Input',
-      label: '字段3',
+      label: 'Field 3',
       colProps: {
         span: 8,
       },
@@ -63,18 +66,18 @@ const schemas = [
     {
       field: 'field7',
       component: 'RadioGroup',
-      label: '字段7',
+      label: 'Field 7',
       colProps: {
         span: 8,
       },
       componentProps: {
         options: [
           {
-            label: '选项1',
+            label: 'Option 1',
             value: '1',
           },
           {
-            label: '选项2',
+            label: 'Option 2',
             value: '2',
           },
         ],
@@ -95,7 +98,7 @@ const [register] = useForm({
     <SchemaForm @register="register" />
   </div>
 <details>
-<summary>显示代码</summary>
+<summary>show code</summary>
 
 ```html
 <template>
@@ -109,7 +112,8 @@ const [register] = useForm({
         schemas: [...getSchamas(), ...getAppendSchemas()],
         showAdvancedButton: true,
         textAlign: "right",
-        labelWidth: "150px",
+        autoAdvancedLine: 3,
+        labelWidth: "70px",
       });
       return { register };
     },

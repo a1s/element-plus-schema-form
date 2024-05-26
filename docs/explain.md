@@ -1,17 +1,19 @@
-## element-plus-schema-form 高级表单
+## Advanced form library element-plus-schema-form
 
-对 **Element-Plus** 的 Form 组件进行封装，通过传递 JSON 数据格式快速 构建 Element-Plus 表单
+Encapsulate the Form component of **Element-Plus** and quickly build Element-Plus forms by passing JSON data format
 
 <br/>
 
-基本表单，分步表单，筛选表单可以覆盖大部分的使用场景，脱离复杂而且繁琐的表单布局工作，更少的代码完成更多的功能。
+Basic forms, step-by-step forms, and shortened forms can cover most usage scenarios, getting rid of complex and tedious form layout work, and completing more functions with less code.
 
-## 优势
+> The JSON data used by this library is specific to [Element Plus Forms](https://element-plus.org/en-US/component/form.html).  This is **not** an implementation of [JSON Forms](https://jsonforms.io/).
 
-- 灵活的配置文件可以满足基本的开发需求
-- 继承 Element-Form 的基础属性，另外增加了一些语法糖和更多的布局设置
-- 自定义的第三组件注册机制让你的表单更丰富
+## Advantages
 
-## 在线 Demo
+- Flexible configuration files can meet basic development needs
+- Inherits the basic properties of Element-Form, and adds some syntax sugar and more layout settings
+- Registration of a custom external components makes your forms richer
 
-[![](https://camo.githubusercontent.com/90808661433696bc57dce8d4ad732307b5cec6270e6b846f114dcd7ee7f9458a/68747470733a2f2f636f646573616e64626f782e696f2f7374617469632f696d672f706c61792d636f646573616e64626f782e737667)](https://codesandbox.io/s/keen-smoke-b92pf)
+## Online Demo
+
+https://codesandbox.io/s/keen-smoke-b92pf

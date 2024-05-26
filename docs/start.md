@@ -1,20 +1,20 @@
-## 快速上手
+## Quick Start
 
-## 安装
+## Install
 
-#### NPM 安装
+#### NPM installation
 
 > npm install element-plus-schema-form
 
-#### ESM 方式导入组件
+#### Import components via ESM
 
 ```
 import { SchemaForm, SchemaFormItem } from 'element-plus-form-schema'
 ```
 
-## 基本使用
+## Basic usage
 
-下面是一个使用简单表单的示例，只有一个输入框
+Here is an example using a simple form with only one input box
 
 <script setup>
 import { SchemaForm, useForm } from '../packages/schema-form'
@@ -22,7 +22,7 @@ const schemas = [
   {
     field: 'field1',
     component: 'Input',
-    label: '字段1',
+    label: 'Field 1',
     required: true
   }
 ]
@@ -33,7 +33,7 @@ const schemas = [
     <SchemaForm :schemas=schemas label-width="70px" />
   </div>
 <details>
-<summary>显示代码</summary>
+<summary>show code</summary>
 
 ```html
 <template>
@@ -46,7 +46,7 @@ const schemas = [
     {
       field: "field1",
       component: "Input",
-      label: "字段1",
+      label: "Field 1",
       required: true,
     },
   ];

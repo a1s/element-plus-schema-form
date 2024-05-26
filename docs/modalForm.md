@@ -1,4 +1,4 @@
-## 弹窗表单
+## Pop-up form
 
 <script setup>
 import { SchemaForm, useForm } from '../packages/schema-form'
@@ -7,7 +7,7 @@ const schemas = [
   {
     field: 'field1',
     component: 'Input',
-    label: '字段1',
+    label: 'Field 1',
     required: true
   }
 ]
@@ -34,29 +34,29 @@ let dialogFormVisible = ref(false)
 
 <div class='md-component'>
   <div class='md-component-item'>
-    <el-button @click="dialogFormVisible = true">打开 Dialog</el-button>
-    <el-dialog title="弹窗表单" v-model="dialogFormVisible" @close="resetFunc">
+    <el-button @click="dialogFormVisible = true">Open Dialog</el-button>
+    <el-dialog title="Pop-up form" v-model="dialogFormVisible" @close="resetFunc">
       <SchemaForm @register="register" />
       <template #footer>
         <span class="dialog-footer">
-          <el-button @click="resetFunc">重 置</el-button>
-          <el-button type="primary" @click="onSubmit">确 定</el-button>
+          <el-button @click="resetFunc">Reset</el-button>
+          <el-button type="primary" @click="onSubmit">OK</el-button>
         </span>
       </template>
     </el-dialog>
   </div>
 <details>
-<summary>显示代码</summary>
+<summary>show code</summary>
 
 ```html
 <template>
-  <el-button @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
-  <el-dialog title="收货地址" v-model="dialogFormVisible">
+  <el-button @click="dialogFormVisible = true">Open Dialog</el-button>
+  <el-dialog title="Pop-up form" v-model="dialogFormVisible" @close="resetFunc">
     <SchemaForm @register="register" />
     <template #footer>
       <span class="dialog-footer">
-        <el-button @click="resetFunc">重 置</el-button>
-        <el-button type="primary" @click="onSubmit">确 定</el-button>
+        <el-button @click="resetFunc">Reset</el-button>
+        <el-button type="primary" @click="onSubmit">OK</el-button>
       </span>
     </template>
   </el-dialog>
@@ -68,7 +68,7 @@ let dialogFormVisible = ref(false)
     {
       field: "field1",
       component: "Input",
-      label: "字段1",
+      label: "Field 1",
       required: true,
     },
   ];

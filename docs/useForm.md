@@ -1,6 +1,6 @@
 ## useForm
 
-组件还提供了 useForm 方法，方便调用函数内部方法
+The component also provides the useForm method to facilitate calling internal methods of the function.
 
 ```javascript
 const [register, methods] = useForm(props);
@@ -8,7 +8,7 @@ const [register, methods] = useForm(props);
 
 ### register
 
-register 用于注册 useForm，如果需要使用 useForm 提供的 api，必须将 register 传入组件的 onRegister 获取表单实例
+register is used to register useForm. If you need to use the API provided by useForm, register must be passed into the component&apos;s onRegister to obtain the form instance.
 
 ```javascript
 <template>
@@ -16,7 +16,7 @@ register 用于注册 useForm，如果需要使用 useForm 提供的 api，必�
 </template>
 ```
 
-### 使用示例
+### Usage example
 
 ```javascript
 <template>
@@ -29,7 +29,7 @@ register 用于注册 useForm，如果需要使用 useForm 提供的 api，必�
     {
       field: 'field1',
       component: 'Input',
-      label: '字段1'
+      label: 'Field 1'
     }
   ];
   export default defineComponent({

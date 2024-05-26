@@ -21,7 +21,7 @@
     <el-main class="schema-main">
       <SchemaForm
         label-position="right"
-        label-width="150px"
+        label-width="250px"
         @register="register"
         :rules="rules"
         @submit="handleSubmit"
@@ -30,8 +30,8 @@
           <el-autocomplete style="width: 100%" :fetch-suggestions="querySearchAsync" v-model="model[field]" placeholder="el-autocomplete" />
         </template>
         <template #add="{ field }">
-          <el-button v-if="Number(field) === 0" @click="add">新增</el-button>
-          <el-button v-if="field > 0" @click="del(field)">删除</el-button>
+          <el-button v-if="Number(field) === 0" @click="add">Add new</el-button>
+          <el-button v-if="field > 0" @click="del(field)">Delete</el-button>
         </template>
     </SchemaForm>
     </el-main>
@@ -547,7 +547,7 @@ export default defineComponent({
         {
           field: `field${n.value}a`,
           component: 'Input',
-          label: '字段' + n.value,
+          label: 'Field ' + n.value,
           colProps: {
             span: 12
           },
@@ -615,7 +615,7 @@ export default defineComponent({
       appendSchemaByField(
         {
           field: 'field10',
-          label: '字段2',
+          label: 'Field 2',
           component: 'Input',
           colProps: {
             span: 8
