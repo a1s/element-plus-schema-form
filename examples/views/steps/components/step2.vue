@@ -17,10 +17,10 @@ export default defineComponent({
       schemas: step2Schemas,
       labelWidth: '100px',
       resetButtonOptions: {
-        text: 'Previous',
+        label: 'Previous',
       },
       submitButtonOptions: {
-        text: 'Submit',
+        label: 'Submit',
       },
       resetFunc: customResetFunc,
       submitFunc: customSubmitFunc,

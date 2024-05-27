@@ -2,14 +2,14 @@
 
 > In addition to the following parameters, attributes described in the official documents are also supported. For details, please refer to [element-plus form](https://element-plus.org/en-US/component/form.html)
 
-| Properties          | Type                  | Description                                                        |
-| ------------------- | --------------------- | ------------------------------------------------------------------ |
-| showResetButton     | `boolean`             | Whether to display the reset button                                |
-| resetButtonOptions  | `object`              | See the reset button configuration below ActionButtonOption        |
-| showSubmitButton    | `boolean`             | Whether to display the submit button                               |
-| submitButtonOptions | `object`              | See ActionButtonOption below for confirmation button configuration |
-| resetFunc           | `() => Promise<void>` | Custom reset button logic `() => Promise<void>;`                   |
-| submitFunc          | `() => Promise<void>` | Custom submit button logic `() => Promise<void>;`                  |
+| Properties          | Type                  | Description                                                                |
+| ------------------- | --------------------- | -------------------------------------------------------------------------- |
+| showResetButton     | `boolean`             | Whether to display the reset button                                        |
+| resetButtonOptions  | `object`              | The `label` member is rendered as the button text, other options are passed to [ElButton](https://element-plus.org/en-US/component/button.html) |
+| showSubmitButton    | `boolean`             | Whether to display the submit button                                       |
+| submitButtonOptions | `object`              | The `label` member is rendered as the button text, other options are passed to [ElButton](https://element-plus.org/en-US/component/button.html) |
+| resetFunc           | `() => Promise<void>` | Handler function for the reset button action                               |
+| submitFunc          | `() => Promise<void>` | Handler function for the submit button action                              |
 
 ## FormSchemaItem
 

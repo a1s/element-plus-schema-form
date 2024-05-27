@@ -6,7 +6,7 @@
         v-bind="getResetBtnOptions"
         v-if="showResetButton"
       >
-        {{getResetBtnOptions.text}}
+        {{getResetBtnOptions.label}}
       </el-Button>
       <el-Button
         type="primary"
@@ -14,7 +14,7 @@
         v-if="showSubmitButton"
         @click="submitAction"
       >
-        {{getSubmitBtnOptions.text}}
+        {{getSubmitBtnOptions.label}}
       </el-Button>
       <el-button
         type="text"
@@ -94,10 +94,10 @@ export default defineComponent({
       ]
     })
     const getSubmitBtnOptions = computed(() => {
-      return Object.assign({ text: props.showAdvancedButton ? 'Query' : 'Submit' }, props.submitButtonOptions)
+      return Object.assign({ label: props.showAdvancedButton ? 'Query' : 'Submit' }, props.submitButtonOptions)
     })
     const getResetBtnOptions = computed(() => {
-      return Object.assign({ text: 'Reset' }, props.resetButtonOptions)
+      return Object.assign({ label: 'Reset' }, props.resetButtonOptions)
     })
 
     function toggleAdvanced () {

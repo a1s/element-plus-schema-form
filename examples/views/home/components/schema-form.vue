@@ -5,8 +5,8 @@
         <el-switch class="mb-20" active-text="Show action buttons" v-model="showActionButtonGroup" @change="onChange" />
         <el-switch class="mb-20" active-text="Show reset button" v-model="showResetButton" @change="onChange" />
         <el-switch class="mb-20" active-text="Show submit button" v-model="showSubmitButton" @change="onChange" />
-        <el-button class="mb-20" @click="setProps({ submitButtonOptions: { loading: true, text: 'loading' }})">Modify submit button</el-button>
-        <el-button class="mb-20" @click="setProps({ resetButtonOptions: { text: 'Cancel' }})">Modify reset button</el-button>
+        <el-button class="mb-20" @click="setProps({ submitButtonOptions: { loading: true, label: 'loading' }})">Modify submit button</el-button>
+        <el-button class="mb-20" @click="setProps({ resetButtonOptions: { label: 'Cancel' }})">Modify reset button</el-button>
         <el-button class="mb-20" @click="setProps({ textAlign: 'right' })">Modify button position</el-button>
         <el-button class="mb-20" @click="onGetFormModal">Get form value</el-button>
         <el-button class="mb-20" @click="onDisplay">Echo field 1</el-button>
