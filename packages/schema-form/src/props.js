@@ -34,5 +34,5 @@ export const basicProps = {
   labelPosition: oneOf(['right', 'left', 'top']).def('right'),
   labelWidth: VueTypes.string,
   inline: VueTypes.bool.def(false),
-  size: oneOf(['', 'medium', 'small', 'mini']).def('medium'),
+  size: oneOf(['', 'large', 'default', 'small']).def('default'),
 }
