@@ -81,7 +81,7 @@ export default defineComponent({
 
     // 渲染form-item内容
     function renderComponent () {
-      const { component, changeEvent = 'change', renderComponentContent, valueField, field } = props.schema
+      const { component = 'Input', changeEvent = 'change', renderComponentContent, valueField, field } = props.schema
 
       const isCheck = component && ['Switch', 'Checkbox', 'CheckboxGroup'].includes(component)
       const isInput = component && ['Input'].includes(component)
