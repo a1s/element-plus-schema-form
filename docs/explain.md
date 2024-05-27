@@ -6,7 +6,7 @@ Encapsulate the Form component of **Element-Plus** and quickly build Element-Plu
 
 Basic forms, step-by-step forms, and shortened forms can cover most usage scenarios, getting rid of complex and tedious form layout work, and completing more functions with less code.
 
-> The JSON data used by this library is specific to [Element Plus Forms](https://element-plus.org/en-US/component/form.html).  This is **not** an implementation of [JSON Forms](https://jsonforms.io/).
+> The forms schema used by this library is specific to [Element Plus Forms](https://element-plus.org/en-US/component/form.html).  <br/> This is **not** an implementation of [JSON Forms](https://jsonforms.io/).
 
 ## Advantages
 

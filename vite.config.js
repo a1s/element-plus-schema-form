@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import styleImport from 'vite-plugin-style-import'
 import Markdown from 'vite-plugin-md'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   base: './',
@@ -38,20 +40,11 @@ export default defineConfig({
         typographer: true,
       }
     }),
-    styleImport({
-      libs: [
-        {
-          libraryName: 'element-plus',
-          esModule: false,
-          ensureStyleFile: true,
-          resolveStyle: (name) => {
-            return name === 'locale' ? '' : `element-plus/theme-chalk/${name}.css`
-          },
-          resolveComponent: (name) => {
-            return `element-plus/lib/${name}`
-          }
-        }
-      ]
-    })
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
   ]
 })
