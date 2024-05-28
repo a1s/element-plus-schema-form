@@ -113,7 +113,7 @@ const schemas = [
       return !!values.field25
     },
     componentProps: {
-      size: 'mini',
+      size: 'small',
       suffixIcon: 'el-icon-edit-outline'
     },
     rules: [

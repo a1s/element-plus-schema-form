@@ -48,9 +48,9 @@ export default defineComponent({
         getOptions.value.map((item) => {
           return type === 'button'
             ?
-            <el-radio-button size={size} label={item.value}>{item.label}</el-radio-button>
+            <el-radio-button size={size} value={item.value}>{item.label}</el-radio-button>
             :
-            <el-radio border={border} size={size} label={item.value}>{item.label}</el-radio>
+            <el-radio border={border} size={size} value={item.value}>{item.label}</el-radio>
         })
       )
     }

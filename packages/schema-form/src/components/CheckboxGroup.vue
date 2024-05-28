@@ -3,7 +3,7 @@
   <el-checkbox-group v-model="state" v-bind="attrs">
     <el-checkbox
       v-for="item in getOptions"
-      :label="item.value"
+      :value="item.value"
       :key="item.value"
     >
       {{item.label}}
