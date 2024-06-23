@@ -4,8 +4,8 @@
   "type": "module",
   "version": "0.0.4",
   "author": "label-fe",
-  "main": "lib/index.umd.js",
-  "module": "lib/index.es.js",
+  "main": "lib/index.umd.cjs",
+  "module": "lib/index.js",
   "style": "lib/style.css",
   "license": "MIT",
   "keywords": [
